@@ -1,0 +1,47 @@
+{
+    "name": "yangweijie/gomoku",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "ext-ffi": "*",
+        "kingbes/libui": "^0.1.3",
+        "symfony/process": "^7.3",
+        "yangweijie/kingbes-libui-sdk": "dev-main",
+        "psr/log": "^1.0 || ^2.0 || ^3.0",
+        "ext-gmp": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "phpgo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yangweijie",
+            "email": "917647288@qq.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "bin": ["main.php"],
+    "scripts": {
+      "post-install-cmd": [
+        "@php scripts/patchBase.php"
+      ],
+      "post-update-cmd": [
+        "@php scripts/patchBase.php"
+      ]
+    },
+    "require-dev": {
+        "humbug/box": "^4.6",
+        "pestphp/pest": "^4.1"
+    }
+}

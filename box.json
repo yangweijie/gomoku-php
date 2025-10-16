@@ -1,0 +1,20 @@
+{
+  "main": "main.php",
+  "output": "gomoku.phar",
+  "directories": [
+    "src",
+    "vendor/kingbes/libui/src",
+    "vendor/yangweijie/kingbes-libui-sdk/src"
+  ],
+  "files": [
+    "composer.json",
+    "README.md"
+  ],
+  "files-bin": [
+    "vendor/kingbes/libui/lib/macos/libui.dylib",
+    "vendor/kingbes/libui/lib/windows/libui.dll",
+    "vendor/kingbes/libui/lib/linux/libui.so"
+  ],
+  "exclude-composer-files": false,
+  "compression": "GZ"
+}
