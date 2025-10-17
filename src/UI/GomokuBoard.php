@@ -4,7 +4,6 @@ namespace phpgo\UI;
 
 use FFI;
 use Kingbes\Libui\Base;
-use Kingbes\Libui\App;
 use Kingbes\Libui\Area;
 use Kingbes\Libui\Draw;
 use Kingbes\Libui\DrawBrushType;
@@ -13,7 +12,6 @@ use Kingbes\Libui\Button;
 use Kingbes\Libui\Label;
 use Kingbes\Libui\Box;
 use Kingbes\Libui\Window;
-use Kingbes\Libui\Control;
 use phpgo\Core\GomokuGame;
 
 class GomokuBoard
