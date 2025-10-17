@@ -2,6 +2,7 @@
 
 namespace phpgo\UI;
 
+use FFI;
 use Kingbes\Libui\Base;
 use Kingbes\Libui\App;
 use Kingbes\Libui\Window;
@@ -11,7 +12,7 @@ use phpgo\Core\GomokuGame;
 
 class GomokuMainWindow
 {
-    private \FFI $ffi;
+    private FFI $ffi;
     private GomokuGame $game;
     private GomokuBoard $board;
     private $window;

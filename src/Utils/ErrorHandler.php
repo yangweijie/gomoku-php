@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace phpgo\Utils;
 
+use Throwable;
+
 /**
  * 错误处理类
  * 
@@ -14,11 +16,11 @@ class ErrorHandler
     /**
      * 处理异常并显示错误信息
      *
-     * @param \Throwable $exception 异常对象
+     * @param Throwable $exception 异常对象
      * @param bool $exit 是否退出程序
      * @return void
      */
-    public static function handleException(\Throwable $exception, bool $exit = true): void
+    public static function handleException(Throwable $exception, bool $exit = true): void
     {
         $errorMessage = "Error: " . $exception->getMessage() . "\n";
         $errorMessage .= "File: " . $exception->getFile() . "\n";
