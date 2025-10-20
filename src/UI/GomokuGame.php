@@ -2,6 +2,8 @@
 
 namespace phpgo\UI;
 
+use Kingbes\Libui\DrawLineCap;
+use Kingbes\Libui\DrawLineJoin;
 use Kingbes\Libui\SDK\LibDrawArea;
 use FFI\CData;
 use Kingbes\Libui\Draw;
@@ -222,9 +224,9 @@ class GomokuGame extends LibDrawArea
         if ($player === 2) {
             $borderBrush = Draw::createBrush(DrawBrushType::Solid, 0.0, 0.0, 0.0, 1.0); // 黑色边框
             $strokeParams = Draw::createStrokeParams(
-                \Kingbes\Libui\DrawLineCap::Flat,
-                \Kingbes\Libui\DrawLineJoin::Miter,
-                \Kingbes\Libui\DrawLineJoin::Miter,
+                DrawLineCap::Flat,
+                DrawLineJoin::Miter,
+                DrawLineJoin::Miter,
                 1.0 // 边框宽度
             );
             Draw::Stroke($params, $stonePath, $borderBrush, $strokeParams);
